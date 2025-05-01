@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import headshot from '../assets/headshot.png'; // Adjust path as needed
 
 function Header() {
@@ -21,9 +21,13 @@ function Header() {
                     src={headshot}
                     alt="Mable Zhang"
                     className="headshot"
-                    style={{ borderColor: borderColor, transition: 'border-color 0.5s ease' }}
+                    style={{
+                        borderColor: borderColor,
+                        transition: 'border-color 0.5s ease'
+                    }}
                 />
-                <h1>Mable Zhang (Professional Cutie Pie)</h1>
+                <h1>Mable Zhang (Professional Cutie Pie) <span
+                    className="heart">❤️</span></h1>
             </div>
             <nav>
                 <a href="#about">About</a>
