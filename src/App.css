@@ -104,3 +104,88 @@ footer {
     margin-top: 40px;
     color: #666;
 }
+
+button {
+    display: block;
+    margin: 20px auto; /* Centers the button horizontally */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+button:active {
+    background-color: #003f7f; /* Even darker blue when clicked */
+}
+
+.chat-container {
+    margin-top: 20px;
+    width: 100%; /* Ensures the container spans the full width */
+}
+
+.chat-container label {
+    display: block; /* Ensures the label takes up the full width */
+    text-align: center; /* Centers the text horizontally */
+    font-weight: bold; /* Optional: Makes the text bold */
+    margin-bottom: 10px; /* Adds spacing below the label */
+}
+
+.chat-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%; /* Ensures the wrapper spans the full width */
+}
+
+.chat-input-wrapper input {
+    flex: 1; /* Makes the input field take up all available space */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Ensures the input spans the full width of its container */
+    box-sizing: border-box; /* Includes padding and border in width calculation */
+}
+
+.chat-input-wrapper button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+.chat-input-wrapper button:hover {
+    background-color: #0056b3;
+}
+
+.chat-input-wrapper button:active {
+    background-color: #003f7f;
+}
+
+.resume-link {
+    display: block; /* Makes the link a block element */
+    text-align: center; /* Centers the text horizontally */
+    margin-bottom: 20px; /* Adds spacing below the link */
+    font-size: 26px;
+    color: #0022ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
