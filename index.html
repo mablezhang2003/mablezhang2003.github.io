@@ -2,50 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mable Zhang | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
-    <h1>Mable Zhang</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-    </ul>
-  </nav>
 
-  <section id="about" class="about">
-    <h2>Welcome!</h2>
-    <p>
-      I'm a data-driven problem solver focused on optimization and analytics. I use Python, APIs, and modeling tools to turn ideas into actionable solutions.
-    </p>
-  </section>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Mable Zhang</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <section id="projects" class="projects">
-    <h2>Featured Projects</h2>
-    <p>These are the ones I had the most fun working on!</p>
-
-    <div class="project-grid">
-      <div class="card">
-        <img src="https://placekitten.com/400/200" alt="Trash Project Image" />
-        <h3>Trash Cleanup Route Optimization</h3>
-        <p>Optimized trash pickup routes using Python, Google Maps API, and linear programming.</p>
-        <div class="tags">
-          <span>Python</span>
-          <span>Optimization</span>
-          <span>API</span>
-        </div>
-        <a href="https://github.com/mablezhang2003/trash-route-optimization" target="_blank">View Project</a>
-      </div>
-
-      <!-- Add more cards here as needed -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm a data-focused problem solver with experience in Python, optimization, and automation. I enjoy creating tools and solutions that make messy problems manageable.</p>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Mable Zhang • <a href="https://github.com/mablezhang2003" target="_blank">GitHub</a></p>
+  <section id="projects" class="section projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <p>Here are a few of my favorite things I've built:</p>
+
+      <div class="project-grid">
+        <div class="card">
+          <img src="https://placekitten.com/600/300" alt="Project Image">
+          <h3>Trash Route Optimization</h3>
+          <p>Optimized city trash collection routes using Python, Google Maps API, and linear programming.</p>
+          <div class="tags">
+            <span>Python</span>
+            <span>API</span>
+            <span>Optimization</span>
+          </div>
+          <a href="https://github.com/mablezhang2003/trash-route-optimization" target="_blank">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Mable Zhang • <a href="https://github.com/mablezhang2003" target="_blank">GitHub</a></p>
+    </div>
   </footer>
+
 </body>
 </html>
-
