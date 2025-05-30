@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mable Zhang | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <nav>
     <h1>Mable Zhang</h1>
-    <p class="tagline">Data Enthusiast | Optimizer | Problem Solver</p>
-  </header>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
 
-  <section class="Introduction">
-    <p>Welcome to my porfolio! I work with Python, optimization models, and APIs to solve real-world problems. Here are some of my featured projects:</p>
+  <section id="about" class="about">
+    <h2>Welcome!</h2>
+    <p>
+      I'm a data-driven problem solver focused on optimization and analytics. I use Python, APIs, and modeling tools to turn ideas into actionable solutions.
+    </p>
   </section>
 
-  <section class="projects">
-    <div class="project-card">
-      <h2>Trash Cleanup Route Optimization</h2>
-      <p>Route planning using Python, Google Maps API, and linear programming to optimize trash pickup routes in urban areas.</p>
-      <a href="https://github.com/mablezhang2003/trash-route-optimization" target="_blank">View Project</a>
+  <section id="projects" class="projects">
+    <h2>Featured Projects</h2>
+    <p>These are the ones I had the most fun working on!</p>
+
+    <div class="project-grid">
+      <div class="card">
+        <img src="https://placekitten.com/400/200" alt="Trash Project Image" />
+        <h3>Trash Cleanup Route Optimization</h3>
+        <p>Optimized trash pickup routes using Python, Google Maps API, and linear programming.</p>
+        <div class="tags">
+          <span>Python</span>
+          <span>Optimization</span>
+          <span>API</span>
+        </div>
+        <a href="https://github.com/mablezhang2003/trash-route-optimization" target="_blank">View Project</a>
+      </div>
+
+      <!-- Add more cards here as needed -->
     </div>
-
-    <!-- You can add more projects here -->
-
   </section>
 
   <footer>
@@ -32,3 +48,4 @@
   </footer>
 </body>
 </html>
+
