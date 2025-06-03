@@ -1,3 +1,4 @@
+import React from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Contact() {
