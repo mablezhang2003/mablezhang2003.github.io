@@ -1,17 +1,20 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function Contact() {
     return (
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>Email: your.email@example.com</p>
+            <p>
+                <FaEnvelope /> mablezhang2003@berkeley.edu
+            </p>
             <div className="social-links">
-                <div className="social-link">
-                    <a href="https://github.com/mablezhang2003">GitHub</a>
-                </div>
-                <div className="social-link">
-                    <a href="https://www.linkedin.com/in/mablezhang/">LinkedIn</a>
-                </div>
+                <a href="https://github.com/mablezhang2003" className="social-link" target="_blank" rel="noopener noreferrer">
+                    <FaGithub size={30} />
+                </a>
+                <a href="https://www.linkedin.com/in/mablezhang/" className="social-link" target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin size={30} />
+                </a>
             </div>
         </section>
     );
