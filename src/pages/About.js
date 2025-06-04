@@ -1,17 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 function About() {
-    const [inputValue, setInputValue] = useState("Tell me more about your work experience...");
-
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value);
-    };
-
-    const handleChatClick = () => {
-        console.log("User input:", inputValue);
-        // Add your chat handling logic here
-    };
-
    return (
     <section id="about">
     <a
