@@ -40,3 +40,5 @@ function About() {
     ></iframe>
   </section>
 );
+}
+export default About;
