@@ -8,7 +8,6 @@ import Welcome from './pages/Welcome';
 import About from './pages/About';
 import Projects from './components/Projects'; 
 import Contact from './components/Contact';  
-import Education from './components/Education'; 
 
 function App() {
   return (
