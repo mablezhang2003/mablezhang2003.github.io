@@ -1,19 +1,6 @@
 /* App.css */
 /* Add these styles to your existing App.css */
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.profile-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
 
 .headshot {
     width: 120px;
@@ -68,13 +55,7 @@ body {
     box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Optional: adds depth */
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-}
+
 
 nav a {
     margin-left: 20px;
@@ -189,3 +170,35 @@ button:active {
     text-decoration: underline;
     color: #0056b3;
 }
+.header-container {
+  position: relative;
+  height: 250px; /* Adjust as needed */
+  background-color: pink; /* Optional */
+}
+
+/* Top-left name */
+.top-left-name {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Center the headshot */
+.center-headshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.headshot {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid;
+  transition: border-color 0.5s ease;
+}
+
