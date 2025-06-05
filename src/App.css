@@ -180,16 +180,17 @@ button:active {
 
 /* Center the headshot */
 .intro-container {
+  margin-top: 40px;
+  margin-bottom:40px; 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh; /* optional: full screen */
   text-align: center;
 }
 
 
-.headshot {
+.headshot { 
   width: 300px;
   height: 300px;
   border-radius: 50%;
