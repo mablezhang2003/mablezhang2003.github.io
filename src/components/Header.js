@@ -15,21 +15,23 @@ function Header() {
     }, []);
 
     return (
-        <header className="header-container">
-            <div className="profile-container">
-                <img
-                    src={headshot}
-                    alt="Mable Zhang"
-                    className="headshot"
-                    style={{
-                        borderColor: borderColor,
-                        transition: 'border-color 0.5s ease'
-                    }}
-                />
-                <h1>Mable Zhang</h1>
-            </div>
-        </header>
-    );
+    <header className="header-container">
+      <div className="top-left-name">
+        <h1>Mable Zhang</h1>
+      </div>
+      <div className="center-headshot">
+        <img
+          src={headshot}
+          alt="Mable Zhang"
+          className="headshot"
+          style={{
+            borderColor: borderColor,
+            transition: 'border-color 0.5s ease',
+          }}
+        />
+      </div>
+    </header>
+  );
 }
 
 export default Header;
