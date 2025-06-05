@@ -17,7 +17,7 @@ function Intro() {
       <img
         src={headshot}
         alt="Mable Zhang"
-        className="intro-headshot"
+        className="headshot"
         style={{ borderColor: borderColor }}
       />
     </div>
