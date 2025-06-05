@@ -26,14 +26,8 @@ function Header() {
                         transition: 'border-color 0.5s ease'
                     }}
                 />
-                <h1>Mable Zhang (Professional Cutie Pie) <span
-                    className="heart">❤️</span></h1>
+                <h1>Mable Zhang</h1>
             </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
         </header>
     );
 }
