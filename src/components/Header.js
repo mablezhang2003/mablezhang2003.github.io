@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import headshot from '../assets/headshot.png'; // Adjust path as needed
+import headshot from '../assets/headshot.jpg'; // Adjust path as needed
 
 function Header() {
     const [borderColor, setBorderColor] = useState('#007bff');
