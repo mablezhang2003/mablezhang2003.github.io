@@ -2,14 +2,7 @@
 /* Add these styles to your existing App.css */
 
 
-.headshot {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid;
-    animation: borderColorChange 8s infinite;
-}
+
 
 @keyframes borderColorChange {
     0% { border-color: #007bff; }
