@@ -20,9 +20,6 @@ function Intro() {
         className="intro-headshot"
         style={{ borderColor: borderColor }}
       />
-      <p className="intro-text">
-        Welcome to my personal website! Browse to learn more.
-      </p>
     </div>
   );
 }
