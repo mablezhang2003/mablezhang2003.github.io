@@ -213,5 +213,63 @@ main {
   padding: 2rem;
 }
 
+/* === Project Grid Layout === */
+
+.projects-section {
+  padding: 2rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #3e2f1c;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #007acc;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  background-color: #005f99;
+}
+
+
 
 
