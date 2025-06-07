@@ -25,9 +25,6 @@ function Projects() {
           description="Built a data pipeline to remove outliers and transform data to feed into the model and conducted feature engineering
 to train a linear regression model to determine the predictive power of 60+ features on housing price"
         >
-          <a className="project-link" href="https://pawty.ai" target="_blank" rel="noreferrer">
-            Visit Pawty Website
-          </a>
         </ProjectCard>
       </div>
     </section>
