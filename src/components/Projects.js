@@ -1,42 +1,37 @@
-import React, { useState } from 'react';
-import NYCMap from "./NYCMap";
+import React from 'react';
+import ProjectCard from './ProjectCard';
+import './Projects.css';
 
 function Projects() {
-    const [routeData, setRouteData] = useState(null);
+  return (
+    <section className="projects-section">
+      <h2>Projects and Work Samples</h2>
+      <div className="projects-grid">
+        <ProjectCard
+          title="Trash Cleanup Optimal Routing "
+          image="/assets/trashcleanup.png"
+          description="Developed a routing algorithm for trash collection in New York City using Vehicle Routing Problem (VRP) and a Geodesic Distance matrix in Python, used heat maps and clustering to identify high-density areas and prioritize cleanup efforts"
+        />
 
-    const fetchOptimalRoute = async () => {
-        try {
-            const response = await fetch('TRASH_API/api/pickup-locations');
-            if (!response.ok) {
-                throw new Error(`Error: ${response.statusText}`);
-            }
-            const data = await response.json();
-            setRouteData(data);
-            console.log('Fetched route data:', data);
-        } catch (error) {
-            console.error('Failed to fetch optimal route:', error);
-        }
-    };
+        <ProjectCard
+          title="World Generation Game"
+          image="/assets/world-generation.png"
+          description='Developed a routing algorithm for trash collection in New York City using Vehicle Routing Problem (VRP) and a Geodesic Distance matrix in Python, used heat maps and clustering to identify high-density areas and prioritize cleanup efforts'
+        />
 
-    return (
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div className="project-list">
-                <div className="project">
-                    <h3>Trash Collection Route Optimization</h3>
-                    <p>Developed an algorithm to optimize trash collection routes in NYC using Python and Google OR-Tools.</p>
-                    <NYCMap />
-                    <button onClick={fetchOptimalRoute}>Calculate Optimal Route</button>
-                    {routeData && (
-                        <div className="route-data">
-                            <h4>Optimal Route Data:</h4>
-                            <pre>{JSON.stringify(routeData, null, 2)}</pre>
-                        </div>
-                    )}
-                </div>
-            </div>
-        </section>
-    );
+        <ProjectCard
+          title="Cook County Housing Gov Data Set"
+          image="/assets/cook-county.png"
+          description="Built a data pipeline to remove outliers and transform data to feed into the model and conducted feature engineering
+to train a linear regression model to determine the predictive power of 60+ features on housing price"
+        >
+          <a className="project-link" href="https://pawty.ai" target="_blank" rel="noreferrer">
+            Visit Pawty Website
+          </a>
+        </ProjectCard>
+      </div>
+    </section>
+  );
 }
 
 export default Projects;
