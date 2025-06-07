@@ -34,9 +34,12 @@
 
 
 body {
-    background-color: #ffc0cb; /* Classic pink */
-    margin: 0;
-    min-height: 100vh;
+  background-color: #fdf6ee; /* soft beige */
+  color: #2c2c2c; /* near-black text for readability */
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
@@ -203,5 +206,12 @@ button:active {
   margin-top: 40px;
   padding: 20px;
 }
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 
 
