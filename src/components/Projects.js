@@ -6,6 +6,7 @@ import worldGenImg from '../assets/world-generation.png';
 import cookCountyImg from '../assets/cook-county.png';
 import neuralNetworkImg from '../assets/neural-network.jpeg';
 import antsBeesImg from '../assets/ants-bees.png';
+import decisionRandomImg from '../assets/decision-random.png';
 
 function Projects() {
   return (
@@ -23,6 +24,13 @@ function Projects() {
           image={neuralNetworkImg}
           description="Implemented a two-layer neural network and CNN from scratch using NumPy. Trained models on Iris and MNIST datasets. Explored learning rates, network sizes, and transfer learning with CIFAR-10 in PyTorch."
         />
+
+        <ProjectCard
+          title="Random Forest on Titanic Survivorship"
+          image={decisionRandomImg}
+          description="Built decision tree and random forest models for classification tasks on Titanic dataset, with custom depth control, missing value handling, and validation accuracy exceeding 80%."
+        />
+
 
         <ProjectCard
           title="World Generation Game"
