@@ -5,6 +5,7 @@ import trashCleanupImg from '../assets/trashcleanup.png';
 import worldGenImg from '../assets/world-generation.png';
 import cookCountyImg from '../assets/cook-county.png';
 import neuralNetworkImg from '../assets/neural-network.jpeg';
+import antsBeesImg from '../assets/ants-bees.png';
 
 function Projects() {
   return (
@@ -28,6 +29,8 @@ function Projects() {
           image={worldGenImg}
           description='Developed a routing algorithm for trash collection in New York City using Vehicle Routing Problem (VRP) and a Geodesic Distance matrix in Python, used heat maps and clustering to identify high-density areas and prioritize cleanup efforts'
         />
+            
+
 
         <ProjectCard
           title="Cook County Housing Gov Data Set"
@@ -35,6 +38,12 @@ function Projects() {
           description="Built a data pipeline to remove outliers and transform data to feed into the model and conducted feature engineering
 to train a linear regression model to determine the predictive power of 60+ features on housing price"
         >
+
+        <ProjectCard
+          title="Ants vs. Bees Game"
+          image={antsBeesImg}
+          description='Built a Python tower defense game with ant units that collect food, throw projectiles, absorb damage, and apply status effects to invading bees, all using class inheritance and a real-time GUI.'
+        />
         </ProjectCard>
       </div>
     </section>
