@@ -37,7 +37,7 @@ function Projects() {
           image={cookCountyImg}
           description="Built a data pipeline to remove outliers and transform data to feed into the model and conducted feature engineering
 to train a linear regression model to determine the predictive power of 60+ features on housing price"
-        >
+        />
 
         <ProjectCard
           title="Ants vs. Bees Game"
