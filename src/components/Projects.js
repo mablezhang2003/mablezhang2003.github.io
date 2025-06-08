@@ -4,6 +4,7 @@ import '../App.css';
 import trashCleanupImg from '../assets/trashcleanup.png';
 import worldGenImg from '../assets/world-generation.png';
 import cookCountyImg from '../assets/cook-county.png';
+import neuralNetworkImg from '../assets/neural-network.jpeg';
 
 function Projects() {
   return (
@@ -14,6 +15,12 @@ function Projects() {
           title="Trash Cleanup Optimal Routing "
           image={trashCleanupImg}
           description="Developed a routing algorithm for trash collection in New York City using Vehicle Routing Problem (VRP) and a Geodesic Distance matrix in Python, used heat maps and clustering to identify high-density areas and prioritize cleanup efforts"
+        />
+            
+         <ProjectCard
+          title="Feedforward and Convolutional Neural Networks"
+          image={neuralNetworkImg}
+          description="Implemented a two-layer neural network and CNN from scratch using NumPy. Trained models on Iris and MNIST datasets. Explored learning rates, network sizes, and transfer learning with CIFAR-10 in PyTorch."
         />
 
         <ProjectCard
