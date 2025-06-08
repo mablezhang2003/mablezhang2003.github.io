@@ -6,7 +6,7 @@ import worldGenImg from '../assets/world-generation.png';
 import cookCountyImg from '../assets/cook-county.png';
 import neuralNetworkImg from '../assets/neural-network.jpeg';
 import antsBeesImg from '../assets/ants-bees.png';
-import decisionRandomImg from '../assets/decision-random.png';
+import decisionRandomImg from '../assets/decision-random.jpeg';
 
 function Projects() {
   return (
