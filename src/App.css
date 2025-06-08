@@ -279,8 +279,8 @@ main {
 
 .nav-home-button {
   text-decoration: none;
-  color: white;
-  background-color: #1f2937; /* dark gray */
+  color: black;
+  background-color: transparent; 
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: bold;
