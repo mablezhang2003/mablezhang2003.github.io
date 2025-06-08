@@ -273,6 +273,19 @@ main {
   background-color: #005f99;
 }
 
+.simple-header {
+  padding: 1rem;
+}
+
+.nav-home-button {
+  text-decoration: none;
+  color: white;
+  background-color: #1f2937; /* dark gray */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
 
 
 
