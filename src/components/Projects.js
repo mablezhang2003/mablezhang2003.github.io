@@ -7,9 +7,9 @@ import cookCountyImg from '../assets/cook-county.png';
 import neuralNetworkImg from '../assets/neural-network.jpeg';
 import antsBeesImg from '../assets/ants-bees.png';
 import decisionRandomImg from '../assets/decision-random.jpeg';
-import worldGenLink from '../assets/decision-random.jpeg';
-import cookCountyLink from '../assets/decision-random.jpeg';
-import antsBeesLink from '../assets/decision-random.jpeg';
+import worldGenLink from '../assets/world-gen.zip';
+import cookCountyLink from '../assets/cookCountyLink.ipynb';
+import antsBeesLink from '../assets/ants-bees.zip';
 
 function Projects() {
   return (
