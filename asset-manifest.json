@@ -1,18 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.61657818.css",
-    "main.js": "/static/js/main.39f4487d.js",
+    "main.js": "/static/js/main.b3d8bf3b.js",
     "static/media/trashcleanup.png": "/static/media/trashcleanup.927f92f2a42983828d9b.png",
     "static/media/cook-county.png": "/static/media/cook-county.4858d3d5e246fd964433.png",
     "static/media/ants-bees.png": "/static/media/ants-bees.ada102e8bbe59adbdb5c.png",
     "static/media/world-generation.png": "/static/media/world-generation.2c8bf01b7afe741f02ac.png",
+    "static/media/cookCountyLink.ipynb": "/static/media/cookCountyLink.580e070268bc4011c4bc.ipynb",
     "static/media/headshot.jpg": "/static/media/headshot.667298b2f967acce2984.jpg",
+    "static/media/world-gen.zip": "/static/media/world-gen.5b5aa18af0faef3bb3cd.zip",
+    "static/media/antsBeesLink.zip": "/static/media/antsBeesLink.c98f0f18ea83cc1c2580.zip",
     "index.html": "/index.html",
     "main.61657818.css.map": "/static/css/main.61657818.css.map",
-    "main.39f4487d.js.map": "/static/js/main.39f4487d.js.map"
+    "main.b3d8bf3b.js.map": "/static/js/main.b3d8bf3b.js.map"
   },
   "entrypoints": [
     "static/css/main.61657818.css",
-    "static/js/main.39f4487d.js"
+    "static/js/main.b3d8bf3b.js"
   ]
 }
