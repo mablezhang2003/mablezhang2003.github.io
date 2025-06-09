@@ -9,7 +9,7 @@ import antsBeesImg from '../assets/ants-bees.png';
 import decisionRandomImg from '../assets/decision-random.jpeg';
 import worldGenLink from '../assets/world-gen.zip';
 import cookCountyLink from '../assets/cookCountyLink.ipynb';
-import antsBeesLink from '../assets/ants-bees.zip';
+import antsBeesLink from '../assets/antsBeesLink.zip';
 
 function Projects() {
   return (
