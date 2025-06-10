@@ -7,9 +7,7 @@ import cookCountyImg from '../assets/cook-county.png';
 import neuralNetworkImg from '../assets/neural-network.jpeg';
 import antsBeesImg from '../assets/ants-bees.png';
 import decisionRandomImg from '../assets/decision-random.jpeg';
-import worldGenLink from '../assets/world-gen.zip';
-import cookCountyLink from '../assets/cookCountyLink.ipynb';
-import antsBeesLink from '../assets/antsBeesLink.zip';
+
 
 function Projects() {
   return (
@@ -20,6 +18,15 @@ function Projects() {
           title="Trash Cleanup Optimal Routing"
           image={trashCleanupImg}
           description="Developed a routing algorithm for trash collection in New York City using Vehicle Routing Problem (VRP) and a Geodesic Distance matrix in Python, used heat maps and clustering to identify high-density areas and prioritize cleanup efforts"
+          link="https://github.com/mablezhang2003/trash-route-optimization"
+        />
+
+        <ProjectCard
+          title="World Generation Game"
+          image={worldGenImg}
+          description="Developed procedural world generation using noise functions and tile-based rendering in a real-time game simulation."
+          link="https://github.com/mablezhang2003/world-generation"
+
         />
 
         <ProjectCard
@@ -34,26 +41,18 @@ function Projects() {
           description="Built decision tree and random forest models for classification tasks on Titanic dataset, with custom depth control, missing value handling, and validation accuracy exceeding 80%."
         />
 
-
-        <ProjectCard
-          title="World Generation Game"
-          image={worldGenImg}
-          description="Developed procedural world generation using noise functions and tile-based rendering in a real-time game simulation."
-          downloadLink={worldGenLink}
-        />
-
         <ProjectCard
           title="Cook County Housing Gov Data Set"
           image={cookCountyImg}
           description="Built a data pipeline to remove outliers and transform data, conducted feature engineering, and trained a linear regression model to predict housing prices from 60+ features."
-          downloadLink={cookCountyLink}
+
         />
 
         <ProjectCard
           title="Ants vs. Bees Game"
           image={antsBeesImg}
           description="Built a Python tower defense game with ant units that collect food, throw projectiles, absorb damage, and apply status effects to invading bees, all using class inheritance and a real-time GUI."
-          downloadLink={antsBeesLink}
+
         />
       </div>
     </section>
