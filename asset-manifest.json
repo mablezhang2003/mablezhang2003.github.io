@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c1b2c34d.css",
+    "main.css": "/static/css/main.ce0105c2.css",
     "main.js": "/static/js/main.36ad1940.js",
     "static/media/trashcleanup.png": "/static/media/trashcleanup.927f92f2a42983828d9b.png",
     "static/media/cook-county.png": "/static/media/cook-county.4858d3d5e246fd964433.png",
@@ -8,11 +8,11 @@
     "static/media/world-generation.png": "/static/media/world-generation.2c8bf01b7afe741f02ac.png",
     "static/media/headshot.jpg": "/static/media/headshot.667298b2f967acce2984.jpg",
     "index.html": "/index.html",
-    "main.c1b2c34d.css.map": "/static/css/main.c1b2c34d.css.map",
+    "main.ce0105c2.css.map": "/static/css/main.ce0105c2.css.map",
     "main.36ad1940.js.map": "/static/js/main.36ad1940.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1b2c34d.css",
+    "static/css/main.ce0105c2.css",
     "static/js/main.36ad1940.js"
   ]
 }
