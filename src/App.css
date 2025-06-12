@@ -103,55 +103,6 @@ button:active {
     background-color: #003f7f; /* Even darker blue when clicked */
 }
 
-.chat-container {
-    margin-top: 20px;
-    width: 100%; /* Ensures the container spans the full width */
-}
-
-.chat-container label {
-    display: block; /* Ensures the label takes up the full width */
-    text-align: center; /* Centers the text horizontally */
-    font-weight: bold; /* Optional: Makes the text bold */
-    margin-bottom: 10px; /* Adds spacing below the label */
-}
-
-.chat-input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%; /* Ensures the wrapper spans the full width */
-}
-
-.chat-input-wrapper input {
-    flex: 1; /* Makes the input field take up all available space */
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 100%; /* Ensures the input spans the full width of its container */
-    box-sizing: border-box; /* Includes padding and border in width calculation */
-}
-
-.chat-input-wrapper button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    flex-shrink: 0; /* Prevents the button from shrinking */
-}
-
-.chat-input-wrapper button:hover {
-    background-color: #0056b3;
-}
-
-.chat-input-wrapper button:active {
-    background-color: #003f7f;
-}
-
 .resume-link {
     display: block; /* Makes the link a block element */
     text-align: center; /* Centers the text horizontally */
@@ -220,20 +171,21 @@ main {
 }
 
 .projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 .project-card {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  width: 300px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-  text-align: left;
-  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .project-card:hover {
@@ -261,16 +213,13 @@ main {
 
 .project-link {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #007acc;
-  color: white;
-  border-radius: 5px;
+  margin-top: 0.5rem;
   text-decoration: none;
+  color: #007bff; /* or whatever color you want */
 }
 
 .project-link:hover {
-  background-color: #005f99;
+  text-decoration: underline;
 }
 
 .simple-header {
