@@ -18,14 +18,14 @@ function Projects() {
           title="Trash Cleanup Optimal Routing"
           image={trashCleanupImg}
           description="Developed a routing algorithm for trash collection in New York City using Vehicle Routing Problem (VRP) and a Geodesic Distance matrix in Python, used heat maps and clustering to identify high-density areas and prioritize cleanup efforts"
-          link="https://github.com/mablezhang2003/trash-route-optimization"
+          githubLink="https://github.com/mablezhang2003/trash-route-optimization"
         />
 
         <ProjectCard
           title="World Generation Game"
           image={worldGenImg}
           description="Developed procedural world generation using noise functions and tile-based rendering in a real-time game simulation."
-          link="https://github.com/mablezhang2003/world-generation"
+          githubLink="https://github.com/mablezhang2003/world-generation"
 
         />
 
