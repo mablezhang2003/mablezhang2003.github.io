@@ -171,21 +171,26 @@ main {
 }
 
 .projects-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  justify-content: center;
+  justify-items: center;
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #ffffff;
   border-radius: 10px;
   padding: 1.5rem;
-  width: 300px;
+  width: 100%;
+  max-width: 300px; /* Ensures consistent card size */
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
   text-align: left;
   transition: transform 0.2s ease;
 }
+
 
 .project-card:hover {
   transform: translateY(-5px);
