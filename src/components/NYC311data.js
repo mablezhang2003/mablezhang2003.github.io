@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 const NYC311data = () => {
     useEffect(() => {
-        const divElement = document.getElementById('viz1751247175515');
+        const divElement = document.getElementById('viz1751248422802');
         const vizElement = divElement.getElementsByTagName('object')[0];
         vizElement.style.width = '100%';
         vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
@@ -12,12 +12,12 @@ const NYC311data = () => {
     }, []);
 
     return (
-        <div className='tableauPlaceholder' id='viz1751247175515' style={{ position: 'relative' }}>
+        <div className='tableauPlaceholder' id='viz1751248422802' style={{ position: 'relative' }}>
             <noscript>
                 <a href='#'>
                     <img
-                        alt='map'
-                        src='https://public.tableau.com/static/images/NT/NT3G2JR93/1_rss.png'
+                        alt='Dashboard 1'
+                        src='https://public.tableau.com/static/images/31/311data_17512470310520/Dashboard1/1_rss.png'
                         style={{ border: 'none' }}
                     />
                 </a>
@@ -25,9 +25,11 @@ const NYC311data = () => {
             <object className='tableauViz' style={{ display: 'none' }}>
                 <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
                 <param name='embed_code_version' value='3' />
-                <param name='path' value='shared/NT3G2JR93' />
+                <param name='site_root' value='' />
+                <param name='name' value='311data_17512470310520/Dashboard1' />
+                <param name='tabs' value='no' />
                 <param name='toolbar' value='yes' />
-                <param name='static_image' value='https://public.tableau.com/static/images/NT/NT3G2JR93/1.png' />
+                <param name='static_image' value='https://public.tableau.com/static/images/31/311data_17512470310520/Dashboard1/1.png' />
                 <param name='animate_transition' value='yes' />
                 <param name='display_static_image' value='yes' />
                 <param name='display_spinner' value='yes' />
@@ -38,6 +40,5 @@ const NYC311data = () => {
         </div>
     );
 };
-
 
 export default NYC311data;
