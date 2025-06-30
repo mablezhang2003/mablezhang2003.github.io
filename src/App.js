@@ -6,10 +6,11 @@ import Footer from './components/Footer';
 
 import Welcome from './pages/Welcome';
 import About from './pages/About';
-import Projects from './components/Projects'; 
-import Contact from './components/Contact';  
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import Intro from './components/Intro'
 import './App.css';
+import NYC311data from "./components/NYC311data";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/nyc311data" element={<NYC311data />} />
         </Routes>
       </main>
       <Footer />
