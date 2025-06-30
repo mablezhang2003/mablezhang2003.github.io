@@ -12,7 +12,7 @@ const Welcome = () => {
       <div style={buttonGroup}>
         <Link to="/about" style={button}>About</Link>
         <Link to="/projects" style={button}>Projects</Link>
-        <Link to="/nyc311data" style={button}>NYC Trash Collection Routing</Link>
+        <Link to="/nyc311data" style={button}>NYC Trash Dashboard</Link>
         <Link to="/contact" style={button}>Contact</Link>
       </div>
     </div>
