@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Intro from './components/Intro'
 import './App.css';
 import NYC311data from "./components/NYC311data";
+import Geolocator from "./components/Geolocator";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/geolocator" element={<Geolocator />} />
           <Route path="/nyc311data" element={<NYC311data />} />
         </Routes>
       </main>
