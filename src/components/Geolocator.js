@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React, { useState, useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios';
@@ -13,6 +13,19 @@ const dotIcon = L.divIcon({
 
 L.Marker.prototype.options.icon = dotIcon;
 
+function FitBounds({ markers }) {
+            const map = useMap();
+
+    useEffect(() => {
+        if (markers.length > 0) {
+            const bounds = L.latLngBounds(markers.map(marker => marker.coords));
+            map.fitBounds(bounds, { padding: [50, 50] });
+        }
+    }, [markers, map]);
+
+    return null;
+}
+
 const Geolocator = () => {
     const [address, setAddress] = useState('');
     const [markers, setMarkers] = useState([]);
@@ -23,7 +36,6 @@ const Geolocator = () => {
                 addresses: [address]
             });
             const data = response.data;
-
             if (data && data.length > 0 && data[0].coordinates) {
                 const { longitude, latitude } = data[0].coordinates;
                 setMarkers([{ coords: [latitude, longitude], name: data[0].address }]);
@@ -40,7 +52,6 @@ const Geolocator = () => {
         try {
             const response = await axios.get('https://geolocator-2ldv.onrender.com/get_trash_locations');
             const data = response.data;
-
             if (data && data.length > 0) {
                 const newMarkers = data
                     .filter(loc => loc.coordinates)
@@ -48,7 +59,6 @@ const Geolocator = () => {
                         coords: [loc.coordinates.latitude, loc.coordinates.longitude],
                             name: loc.address
                         }));
-
                 setMarkers(newMarkers);
             } else {
                 alert('Coordinates not found for the given address.');
@@ -59,6 +69,8 @@ const Geolocator = () => {
         }
     };
 
+    const initialPosition = [40.7128, -74.0060];
+    const initialZoom = 12;
     const commonHeight = '40px';
 
     return (
@@ -121,8 +133,8 @@ const Geolocator = () => {
                 overflow: "hidden"
             }}>
                 <MapContainer
-                    center={markers.length > 0 ? markers[0].coords : [40.7128, -74.0060]}
-                    zoom={12}
+                    center={initialPosition}
+                    zoom={initialZoom}
                     style={{ height: "100%", width: "100%" }}
                 >
                     <TileLayer
@@ -140,6 +152,8 @@ const Geolocator = () => {
                             </Popup>
                         </Marker>
                     ))}
+
+                    <FitBounds markers={markers} />
                 </MapContainer>
             </div>
         </div>
