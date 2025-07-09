@@ -1,30 +1,21 @@
 import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios';
 
-const defaultIcon = L.icon({
-    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-    iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
-    shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41]
+const dotIcon = L.divIcon({
+    className: 'custom-dot',
+    html: '<span style="background-color: #ff8000; width: 10px; height: 10px; display: block; border-radius: 50%;"></span>',
+    iconSize: [10, 10],
+    iconAnchor: [5, 5]
 });
 
-L.Marker.prototype.options.icon = defaultIcon;
-
-function MapMover({ coords }) {
-    const map = useMap();
-    if (coords) {
-        map.setView(coords, map.getZoom());
-    }
-    return null;
-}
+L.Marker.prototype.options.icon = dotIcon;
 
 const Geolocator = () => {
     const [address, setAddress] = useState('');
-    const [marker, setMarker] = useState(null);
+    const [markers, setMarkers] = useState([]);
 
     const handleSearch = async () => {
         try {
@@ -35,7 +26,30 @@ const Geolocator = () => {
 
             if (data && data.length > 0 && data[0].coordinates) {
                 const { longitude, latitude } = data[0].coordinates;
-                setMarker({ coords: [latitude, longitude], name: data[0].address });
+                setMarkers([{ coords: [latitude, longitude], name: data[0].address }]);
+            } else {
+                alert('Coordinates not found for the given address.');
+            }
+        } catch (error) {
+            alert('Error fetching coordinates. Please try again.');
+            console.error(error);
+        }
+    };
+
+    const handlePlotTrashLocations = async () => {
+        try {
+            const response = await axios.get('https://geolocator-2ldv.onrender.com/get_trash_locations');
+            const data = response.data;
+
+            if (data && data.length > 0) {
+                const newMarkers = data
+                    .filter(loc => loc.coordinates)
+                    .map(loc => ({
+                        coords: [loc.coordinates.latitude, loc.coordinates.longitude],
+                            name: loc.address
+                        }));
+
+                setMarkers(newMarkers);
             } else {
                 alert('Coordinates not found for the given address.');
             }
@@ -49,7 +63,11 @@ const Geolocator = () => {
 
     return (
         <div>
-            <div style={{ marginBottom: '10px', display: 'flex', alignItems: 'center' }}>
+            <div style={{
+                marginBottom: '10px',
+                display: 'flex',
+                alignItems: 'center'
+            }}>
                 <input
                     type="text"
                     value={address}
@@ -74,7 +92,25 @@ const Geolocator = () => {
                 >
                     Search Address
                 </button>
+                <button
+                    onClick={handlePlotTrashLocations}
+                    style={{
+                        height: commonHeight,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}
+                >
+                    Plot Trash Locations
+                </button>
             </div>
+
+            <style>
+                {`.leaflet-div-icon.custom-dot {
+                    background-color: transparent;
+                    border: none;
+                }`}
+            </style>
 
             <div className="map-container" style={{
                 height: "500px",
@@ -85,7 +121,7 @@ const Geolocator = () => {
                 overflow: "hidden"
             }}>
                 <MapContainer
-                    center={marker ? marker.coords : [40.7128, -74.0060]}
+                    center={markers.length > 0 ? markers[0].coords : [40.7128, -74.0060]}
                     zoom={12}
                     style={{ height: "100%", width: "100%" }}
                 >
@@ -94,10 +130,8 @@ const Geolocator = () => {
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
                     />
 
-                    {marker && <MapMover coords={marker.coords} />}
-
-                    {marker && (
-                        <Marker position={marker.coords}>
+                    {markers.map((marker, index) => (
+                        <Marker key={index} position={marker.coords} icon={dotIcon}>
                             <Popup>
                                 <div style={{ color: '#333' }}>
                                     <strong>{marker.name}</strong>
@@ -105,7 +139,7 @@ const Geolocator = () => {
                                 </div>
                             </Popup>
                         </Marker>
-                    )}
+                    ))}
                 </MapContainer>
             </div>
         </div>
