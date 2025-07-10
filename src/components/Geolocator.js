@@ -36,9 +36,14 @@ const Geolocator = () => {
                 addresses: [address]
             });
             const data = response.data;
-            if (data && data.length > 0 && data[0].coordinates) {
-                const { longitude, latitude } = data[0].coordinates;
-                setMarkers([{ coords: [latitude, longitude], name: data[0].address }]);
+            if (data && data.length > 0) {
+                const { coordinates } = data[0];
+                if (coordinates && coordinates.latitude && coordinates.longitude) {
+                    setMarkers([{ coords: [coordinates.latitude, coordinates.longitude], name: data[0].address }]);
+            } else {
+                    console.error("Coordinates are not valid:", coordinates);
+                alert('Coordinates not found for the given address.');
+            }
             } else {
                 alert('Coordinates not found for the given address.');
             }
@@ -54,11 +59,14 @@ const Geolocator = () => {
             const data = response.data;
             if (data && data.length > 0) {
                 const newMarkers = data
-                    .filter(loc => loc.coordinates)
+                    .filter(loc => {
+                        const { coordinates } = loc;
+                        return coordinates && coordinates.latitude && coordinates.longitude;
+                    })
                     .map(loc => ({
                         coords: [loc.coordinates.latitude, loc.coordinates.longitude],
-                            name: loc.address
-                        }));
+                        name: loc.address
+                    }));
                 setMarkers(newMarkers);
             } else {
                 alert('Coordinates not found for the given address.');
@@ -67,7 +75,7 @@ const Geolocator = () => {
             alert('Error fetching coordinates. Please try again.');
             console.error(error);
         }
-    };
+};
 
     const initialPosition = [40.7128, -74.0060];
     const initialZoom = 12;
